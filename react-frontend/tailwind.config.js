@@ -49,7 +49,7 @@ export default {
                 mono: ['Source Code Pro', 'monospace'],
             },
             maxWidth: {
-                'site': '1200px',
+                'site': '920px',
             },
             height: {
                 'hero': '620px'

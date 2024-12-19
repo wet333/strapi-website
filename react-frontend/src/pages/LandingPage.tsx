@@ -6,6 +6,7 @@ import {Carousel} from "../components/ui/components/Carrousel.tsx";
 import {StrapiImage} from "../types/StrapiTypes.ts";
 import {MultiParagraphBlock} from "../components/ui/blocks/MultiParagraphBlock.tsx";
 import {PageSection} from "../components/ui/blocks/PageSection.tsx";
+import {ContactForm} from "../components/ui/components/ContactForm.tsx";
 
 type HomeData = {
     data: {
@@ -72,7 +73,7 @@ export function LandingPage() {
             </div>
 
             {homeData?.data?.activateCompanyInfo && (
-                <PageSection className={"mb-16"} title={"About Us"}>
+                <PageSection className={"mb-16 w-full max-w-site"} title={"About Us"}>
                     <MultiParagraphBlock>
                         {homeData?.data?.CompanyInformation?.map((node: InformationItem, index) => {
                             if (node.type === "paragraph") {
@@ -118,6 +119,8 @@ export function LandingPage() {
                     </div>
                 </PageSection>
             )}
+
+            <ContactForm/>
 
         </DefaultLayout>
     )
